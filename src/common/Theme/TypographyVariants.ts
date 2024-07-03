@@ -28,7 +28,7 @@ export const getTypography = (themeColor: "light" | "dark") => ({
   },
   //Cart
   cartTitle: {
-    fontSize: fontSizes.xlarge,
+    fontSize: fontSizes.medium,
     fontWeight: 700,
     color:
       themeColor === "light"
@@ -36,14 +36,19 @@ export const getTypography = (themeColor: "light" | "dark") => ({
         : palette[themeColor].text(),
   },
   cartPrice: {
-    fontSize: fontSizes.xxlarge,
-    fontWeight: 900,
-    medium: palette[themeColor].text("900"),
+    fontSize: fontSizes.medium,
+    fontWeight: 700,
+    color: palette[themeColor].text("900"),
   },
   cartSmallTypo: {
     fontSize: fontSizes.xsmall,
     fontWeight: 500,
     color: palette[themeColor].text(),
+  },
+  cartItemsQuantityText: {
+    fontSize: fontSizes.xsmall,
+    fontWeight: 700,
+    color: palette[themeColor].white(),
   },
   //Button
   primaryButtonText: {

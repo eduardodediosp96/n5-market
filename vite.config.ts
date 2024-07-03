@@ -16,6 +16,8 @@ export default defineConfig({
       "@styles": "/src/common/Styles",
       "@theme": "/src/common/Theme",
       "@utils": "/src/common/Utils",
+      "@services": "/src/services",
+      "@store": "/src/store",
     },
   },
 });

@@ -10,7 +10,9 @@
       "@images/*": ["src/common/Images/*"],
       "@styles/*": ["src/common/Styles/*"],
       "@theme/*": ["src/common/Theme/*"],
-      "@utils/*": ["src/common/Utils/*"]
+      "@utils/*": ["src/common/Utils/*"],
+      "@services/*": ["src/services/*"],
+      "@store/*": ["src/store/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
