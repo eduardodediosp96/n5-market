@@ -59,11 +59,15 @@ const Product = ({ product }: ProductProps) => {
           variant="cartSmallTypo"
           color={product.inStock ? "success" : "error"}
         >
-          {product.inStock ? "In stock" : "Out of stock"}
+          {product.inStock
+            ? `Only ${product.stock} left in stock`
+            : "Out of stock"}
         </Typography>
         <ProductInfo>
           {!isInCart ? (
             <NumericInput
+              min={0}
+              max={product.stock}
               value={quantity}
               onValueChange={setQuantity}
               disabled={!product.inStock}

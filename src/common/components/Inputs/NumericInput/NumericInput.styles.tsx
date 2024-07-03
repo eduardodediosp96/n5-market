@@ -57,6 +57,7 @@ export const NumericInputWrapper = styled.div<{ disabled: boolean }>`
     padding: 4px;
     opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
     cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+    min-width: 75px;
   }
 
   //remove native arrows from input
