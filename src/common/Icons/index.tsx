@@ -1,12 +1,4 @@
-export { default as CodeIcon } from "./code-icon.svg?react";
-export { default as GamingIcon } from "./gaming-icon.svg?react";
-export { default as GithubIcon } from "./github-icon.svg?react";
-export { default as LinkedinIcon } from "./linkedin-icon.svg?react";
-export { default as LinkIcon } from "./link-icon.svg?react";
-export { default as MailIcon } from "./mail-icon.svg?react";
 export { default as MoonIcon } from "./moon-icon.svg?react";
-export { default as ReactIcon } from "./react-icon.svg?react";
-export { default as StudyIcon } from "./study-icon.svg?react";
 export { default as SunIcon } from "./sun-icon.svg?react";
 export { default as BackArrowIcon } from "./back-arrow.svg?react";
 export { default as MarketCartIcon } from "./market-cart.svg?react";
