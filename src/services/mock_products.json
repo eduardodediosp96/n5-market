@@ -1,0 +1,492 @@
+{
+  "products": [
+    {
+      "id": "id-6t8fr95kznh9wj3b",
+      "name": "Classic White T-Shirt",
+      "price": 83,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck5-Pack-03_4c01f3ea-1b48-4362-be1b-ae32485bcc05_540x.webp",
+      "stock": 23
+    },
+    {
+      "id": "id-tbjmly9whsg4fvnx",
+      "name": "Black V-Neck",
+      "price": 95,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 12
+    },
+    {
+      "id": "id-xy5c3qvgokbft2ez",
+      "name": "Blue Polo",
+      "price": 15,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 7
+    },
+    {
+      "id": "id-7ozfgkcyav98rsbl",
+      "name": "Red Graphic Tee",
+      "price": 3,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 55
+    },
+    {
+      "id": "id-85gc1vl7un4dwpxb",
+      "name": "Green Striped Shirt",
+      "price": 58,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 32
+    },
+    {
+      "id": "id-i1cd2xz46s0w8ktn",
+      "name": "Yellow Sport Tee",
+      "price": 7,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-5fm9kqu6wv7i0tol",
+      "name": "Pink Crew Neck",
+      "price": 64,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 0
+    },
+    {
+      "id": "id-t5vh0fjlgxp7znwa",
+      "name": "Grey Long Sleeve",
+      "price": 48,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 13
+    },
+    {
+      "id": "id-5b9z3qwkn4fi7pxu",
+      "name": "Purple Hoodie",
+      "price": 73,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-0szahb7t4u6k8zpx",
+      "name": "Brown Tank Top",
+      "price": 40,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 0
+    },
+    {
+      "id": "id-5whbkd2f98zo1ucx",
+      "name": "Orange Sweatshirt",
+      "price": 5,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-qzax6h7pyf4bdcvw",
+      "name": "Maroon Baseball Tee",
+      "price": 85,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-jdwi6mr7t9u2cvax",
+      "name": "Navy Henley",
+      "price": 50,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-9cgxr25ufk0i4vma",
+      "name": "Teal Pocket Tee",
+      "price": 6,
+      "inStock": false,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 0
+    },
+    {
+      "id": "id-q3s1c7by0gjkfpdz",
+      "name": "Charcoal Gym Shirt",
+      "price": 73,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 64
+    },
+    {
+      "id": "id-1z8ukb3vgahcy95t",
+      "name": "Olive Muscle Tee",
+      "price": 80,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 3
+    },
+    {
+      "id": "id-pxlqvg2sk19at3yb",
+      "name": "Cyan Performance Tee",
+      "price": 45,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 60
+    },
+    {
+      "id": "id-k3y7bshg98zrdlu6",
+      "name": "Lime Raglan",
+      "price": 80,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 73
+    },
+    {
+      "id": "id-3tw1yzdpkb8g6fuc",
+      "name": "Turquoise Polo",
+      "price": 33,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 87
+    },
+    {
+      "id": "id-hnbvgmp3uf9kr84s",
+      "name": "Burgundy Long Sleeve",
+      "price": 28,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 33
+    },
+    {
+      "id": "id-1c5k4vxq78dhtg9b",
+      "name": "Beige Casual Tee",
+      "price": 92,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 35
+    },
+    {
+      "id": "id-7zmxd5y21lp9htbc",
+      "name": "Aqua Graphic Tee",
+      "price": 70,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 12
+    },
+    {
+      "id": "id-yl9thc1p5vkmufg8",
+      "name": "Coral V-Neck",
+      "price": 21,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 47
+    },
+    {
+      "id": "id-49gkcw6b8uzn2mjy",
+      "name": "Indigo Hoodie",
+      "price": 55,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 2
+    },
+    {
+      "id": "id-4p9hxuvkty02ig3z",
+      "name": "Mustard Sport Tee",
+      "price": 27,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 90
+    },
+    {
+      "id": "id-g7hz8pndc4fkto3b",
+      "name": "Peach Crew Neck",
+      "price": 60,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 61
+    },
+    {
+      "id": "id-r5fvg2uymnz9o8cw",
+      "name": "Lavender Striped Shirt",
+      "price": 16,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 71
+    },
+    {
+      "id": "id-x3y1pb68ocw5n79z",
+      "name": "Khaki Polo",
+      "price": 83,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 77
+    },
+    {
+      "id": "id-g4rzh2mt5yd1cpw7",
+      "name": "Emerald Henley",
+      "price": 84,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 45
+    },
+    {
+      "id": "id-3gny64xkls5ahwz0",
+      "name": "Slate Long Sleeve",
+      "price": 5,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 2
+    },
+    {
+      "id": "id-hglz9k5w2r8csmnb",
+      "name": "Amber Tank Top",
+      "price": 39,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 13
+    },
+    {
+      "id": "id-1w67zgkt3msvf9y0",
+      "name": "Crimson Sweatshirt",
+      "price": 52,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 1
+    },
+    {
+      "id": "id-7mns8pb3ufldx1qy",
+      "name": "Ivory Baseball Tee",
+      "price": 98,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 22
+    },
+    {
+      "id": "id-wy7x2clft69b1s3m",
+      "name": "Magenta Pocket Tee",
+      "price": 85,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 18
+    },
+    {
+      "id": "id-mcxbl6so7q8yk5tg",
+      "name": "Copper Gym Shirt",
+      "price": 16,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 23
+    },
+    {
+      "id": "id-4rw1yzbndk2ch8qx",
+      "name": "Silver Muscle Tee",
+      "price": 87,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 93
+    },
+    {
+      "id": "id-f62zngyuvm93qx8r",
+      "name": "Bronze Performance Tee",
+      "price": 6,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 45
+    },
+    {
+      "id": "id-y8twjzlmphokngb3",
+      "name": "Ruby Raglan",
+      "price": 50,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 60
+    },
+    {
+      "id": "id-rj5xmd7lgcz82qb4",
+      "name": "Gold Polo",
+      "price": 48,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 72
+    },
+    {
+      "id": "id-ycq9sbvlt1fx26wk",
+      "name": "Sapphire Hoodie",
+      "price": 56,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 34
+    },
+    {
+      "id": "id-wf7glpbyx2tdrm4k",
+      "name": "Platinum Long Sleeve",
+      "price": 95,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 80
+    },
+    {
+      "id": "id-lsgb8tpz7yxwvm3d",
+      "name": "Cobalt V-Neck",
+      "price": 83,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 94
+    },
+    {
+      "id": "id-jmv4k9lg3ucps5zw",
+      "name": "Steel Crew Neck",
+      "price": 79,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 16
+    },
+    {
+      "id": "id-5shwv9bk0yz8glcr",
+      "name": "Onyx Graphic Tee",
+      "price": 6,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 23
+    },
+    {
+      "id": "id-p5vxzmc9yr8gnqls",
+      "name": "Titanium Sport Tee",
+      "price": 10,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 13
+    },
+    {
+      "id": "id-6z2kfctg9lvnypow",
+      "name": "Quartz Polo",
+      "price": 5,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 61
+    },
+    {
+      "id": "id-mu0scbpt3gz1w5hk",
+      "name": "Garnet Striped Shirt",
+      "price": 69,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 26
+    },
+    {
+      "id": "id-x6wbytd4cz0sl9am",
+      "name": "Jade Henley",
+      "price": 97,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 3
+    },
+    {
+      "id": "id-4uq81dykl7f2g9hm",
+      "name": "Obsidian Tank Top",
+      "price": 33,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 66
+    },
+    {
+      "id": "id-7xfntdlmqry6cp9v",
+      "name": "Pearl Sweatshirt",
+      "price": 93,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 35
+    },
+    {
+      "id": "id-1mfw7qthsgxcn5u4",
+      "name": "Opal Baseball Tee",
+      "price": 28,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 91
+    },
+    {
+      "id": "id-7kb8xrz4pqm2dghs",
+      "name": "Topaz Pocket Tee",
+      "price": 45,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 48
+    },
+    {
+      "id": "id-d8zwm4cl9k2htox5",
+      "name": "Amethyst Muscle Tee",
+      "price": 99,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 71
+    },
+    {
+      "id": "id-4wvghyb2lnokx7zc",
+      "name": "Aquamarine Performance Tee",
+      "price": 98,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 31
+    },
+    {
+      "id": "id-nw0lmp2k3q1vsct9",
+      "name": "Peridot Raglan",
+      "price": 30,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 26
+    },
+    {
+      "id": "id-q7pb91mwh3f6nktx",
+      "name": "Turquoise Sport Tee",
+      "price": 84,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/LongSleeve3-Pack-06_84388920-b2bd-4d50-8398-287198ad9e28_540x.webp",
+      "stock": 92
+    },
+    {
+      "id": "id-p3t6mhn5ly0zgcw9",
+      "name": "Coral Crew Neck",
+      "price": 13,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 3
+    },
+    {
+      "id": "id-xt3l2yk8c0np1z5v",
+      "name": "Fuchsia V-Neck",
+      "price": 24,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-neck3-Pack-05_dde85b2a-5ef8-493b-ad62-d84178b803a7_540x.webp",
+      "stock": 4
+    },
+    {
+      "id": "id-b3w1hg2zklfnsq5v",
+      "name": "Lavender Polo",
+      "price": 33,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/V-Neck5-Pack-05_8451cc95-7118-46bb-accf-5ff053ceb98c_540x.webp",
+      "stock": 3
+    },
+    {
+      "id": "id-jz3g9ylmq5wkfcnb",
+      "name": "Ivory Hoodie",
+      "price": 57,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/CrewNeck3-Pack-03.webp",
+      "stock": 18
+    },
+    {
+      "id": "id-5dvmk0gql2pxh38s",
+      "name": "Silver Long Sleeve",
+      "price": 48,
+      "inStock": true,
+      "image": "https://upcdn.io/W142ige/raw/Classic_Fit_-_Long_Sleeve_3-Pack.jpg",
+      "stock": 79
+    }
+  ]
+}
