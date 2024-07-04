@@ -1,0 +1,25 @@
+export default {
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.svg$": "jest-transformer-svg",
+  },
+  moduleNameMapper: {
+    "^@commonComponents/(.*)$": "<rootDir>/src/common/Components/$1",
+    "^@components/(.*)$": "<rootDir>/src/components/$1",
+    "^@store/(.*)$": "<rootDir>/src/store/$1",
+    "^@test/(.*)$": "<rootDir>/src/_tests_/$1",
+    "^@constants/(.*)$": "<rootDir>/src/common/Constants/$1",
+    "^@hooks/(.*)$": "<rootDir>/src/common/Hooks/$1",
+    "^@icons": "<rootDir>/src/common/Icons/index.tsx",
+    "^@images/(.*)$": "<rootDir>/src/common/Images/$1",
+    "^@styles/(.*)$": "<rootDir>/src/common/Styles/$1",
+    "^@theme/(.*)$": "<rootDir>/src/common/Theme/$1",
+    "^@utils/(.*)$": "<rootDir>/src/common/Utils/$1",
+    "^@services/(.*)$": "<rootDir>/src/services/$1",
+    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+    "^.+\\.svg(\\?.*)?$": "<rootDir>/src/common/Utils/svgTransformer.ts",
+  },
+  snapshotSerializers: ["@emotion/jest/serializer"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+};

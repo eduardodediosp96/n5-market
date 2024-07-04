@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), svgr()],
   resolve: {
     alias: {
-      "@commonComponents": "/src/common/components",
+      "@commonComponents": "/src/common/Components",
       "@components": "/src/components",
       "@constants": "/src/common/Constants",
       "@hooks": "/src/common/Hooks",
@@ -18,6 +18,7 @@ export default defineConfig({
       "@utils": "/src/common/Utils",
       "@services": "/src/services",
       "@store": "/src/store",
+      "@test": "/src/test",
     },
   },
 });
