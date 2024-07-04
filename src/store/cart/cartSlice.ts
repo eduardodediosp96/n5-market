@@ -1,33 +1,33 @@
 // @Types
 import { type Product } from "@services/products.types";
 import { type ImmerStateCreator } from "../types";
+import { submitCheckout } from "@services/cartProducts";
 
-interface CartProduct {
+export interface CartProduct {
   product: Product;
   quantity: number;
   total: number;
 }
 
-export interface Cart {
-  products: CartProduct[];
-  total: number;
-}
-
 export interface CartSlice {
-  cart: Cart;
+  cartProducts: CartProduct[];
+  isSubmitting: boolean;
   addToCart: (product: Product, quantity: number) => void;
   removeFromCart: (productId: string) => void;
+  updateProductQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
   getTotal: () => number;
   getCartElementsNumber: () => number;
+  submitCheckout: () => void;
 }
 
 export const createCartSlice: ImmerStateCreator<CartSlice> = (set, get) => ({
-  cart: { products: [], total: 0 },
+  cartProducts: [],
+  isSubmitting: false,
   addToCart: (product, quantity) => {
     set(
       (state) => {
-        state.cart.products.push({
+        state.cartProducts.push({
           product,
           quantity,
           total: product.price * quantity,
@@ -40,7 +40,7 @@ export const createCartSlice: ImmerStateCreator<CartSlice> = (set, get) => ({
   removeFromCart: (productId) => {
     set(
       (state) => {
-        state.cart.products = state.cart.products.filter(
+        state.cartProducts = state.cartProducts.filter(
           (p) => p.product.id !== productId
         );
       },
@@ -48,20 +48,67 @@ export const createCartSlice: ImmerStateCreator<CartSlice> = (set, get) => ({
       "PRODUCT_REMOVED_FROM_CART"
     );
   },
+  updateProductQuantity: (productId, quantity) => {
+    set(
+      (state) => {
+        const product = state.cartProducts.find(
+          (p) => p.product.id === productId
+        );
+        if (product) {
+          product.quantity = quantity;
+          product.total = product.product.price * quantity;
+        }
+      },
+      false,
+      "PRODUCT_QUANTITY_UPDATED"
+    );
+  },
   clearCart: () => {
     set(
       (state) => {
-        state.cart.products = [];
-        state.cart.total = 0;
+        state.cartProducts = [];
       },
       false,
       "CART_CLEARED"
     );
   },
+  submitCheckout: async () => {
+    set(
+      (state) => {
+        state.isSubmitting = true;
+      },
+      false,
+      "CHECKOUT_SUBMITTING_STARTED"
+    );
+
+    try {
+      await submitCheckout();
+      const { cartProducts, reduceProductStock: updateProductStock } = get();
+      cartProducts.forEach((cartProduct: CartProduct) => {
+        updateProductStock(cartProduct.product.id, cartProduct.quantity);
+      });
+      set(
+        (state) => {
+          state.cartProducts = [];
+          state.isSubmitting = false;
+        },
+        false,
+        "CHECKOUT_SUBMITTED"
+      );
+    } catch (error) {
+      set(
+        (state) => {
+          state.isSubmitting = false;
+        },
+        false,
+        "CHECKOUT_SUBMITTING_ERROR"
+      );
+    }
+  },
   getTotal: () => {
-    return get().cart.products.reduce((acc, curr) => acc + curr.total, 0);
+    return get().cartProducts.reduce((acc, curr) => acc + curr.total, 0) || 0;
   },
   getCartElementsNumber: () => {
-    return get().cart.products.length;
+    return get().cartProducts.length || 0;
   },
 });

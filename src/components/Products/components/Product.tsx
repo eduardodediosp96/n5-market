@@ -11,11 +11,15 @@ import {
 
 // @Components
 import NumericInput from "@commonComponents/Inputs/NumericInput/Numericinput";
-import Button, { ButtonType } from "@commonComponents/Button/Button";
+import Button, {
+  ButtonSize,
+  ButtonType,
+} from "@commonComponents/Button/Button";
 import Typography from "@commonComponents/Typography/Typography";
+import SVGIcon from "@commonComponents/SvgIcon/SvgIcon";
 
 // @Icons
-import SVGIcon, { PlusIcon, TrashBinIcon } from "@icons";
+import { PlusIcon, TrashBinIcon } from "@icons";
 
 // @Types
 import { type Product } from "@services/products.types";
@@ -29,12 +33,12 @@ interface ProductProps {
 
 const Product = ({ product }: ProductProps) => {
   const [quantity, setQuantity] = useState(0);
-  const { cart, addToCart, removeFromCart } = useStore((state) => ({
-    cart: state.cart,
+  const { cartProducts, addToCart, removeFromCart } = useStore((state) => ({
+    cartProducts: state.cartProducts,
     addToCart: state.addToCart,
     removeFromCart: state.removeFromCart,
   }));
-  const isInCart = cart.products.some((p) => p.product.id === product.id);
+  const isInCart = cartProducts.some((p) => p.product.id === product.id);
 
   const handleAddToCart = () => {
     addToCart(product, quantity);
@@ -55,7 +59,6 @@ const Product = ({ product }: ProductProps) => {
           <Typography variant="cartPrice">${product.price}</Typography>
         </ProductInfo>
         <Typography
-          margin="0 1 1 1"
           variant="cartSmallTypo"
           color={product.inStock ? "success" : "error"}
         >
@@ -78,6 +81,7 @@ const Product = ({ product }: ProductProps) => {
               buttonType={ButtonType.TERTIARY}
               onClick={handleAddToCart}
               disabled={!product.inStock}
+              size={ButtonSize.SMALL}
             >
               <SVGIcon icon={PlusIcon} size="0.75rem" />
               <Typography variant="cartSmallTypo">Add to cart</Typography>
@@ -86,6 +90,7 @@ const Product = ({ product }: ProductProps) => {
             <Button
               buttonType={ButtonType.TERTIARY}
               onClick={handleRemoveFromCart}
+              size={ButtonSize.SMALL}
             >
               <SVGIcon icon={TrashBinIcon} size="0.75rem" />
               <Typography variant="cartSmallTypo">Remove from cart</Typography>

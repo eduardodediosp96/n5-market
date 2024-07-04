@@ -32,11 +32,11 @@ export const MainContainer = styled("div")`
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
-    max-width: 600px;
+    max-width: 100%;
   }
 `;
 
 export const MainBody = styled("div")`
-  height: ${(props) => `calc(100% - ${props.theme.sizing.navbar})`};
+  min-height: ${(props) => `calc(100vh - ${props.theme.sizing.navbar})`};
   padding: ${(props) => props.theme.spacing(2)} 0;
 `;

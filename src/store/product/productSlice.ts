@@ -7,8 +7,12 @@ import { getProducts } from "@services/products";
 
 export interface ProductSlice {
   products: Product[];
-  loading: boolean;
-  getProducts: (page: number, limit: number) => Promise<void>;
+  isFetchingProducts: boolean;
+  allProductsFetched: boolean;
+  page: number;
+  limit: number;
+  getProducts: () => Promise<void>;
+  reduceProductStock: (productId: string, quantity: number) => void;
 }
 
 export const createProductSlice: ImmerStateCreator<ProductSlice> = (
@@ -16,21 +20,41 @@ export const createProductSlice: ImmerStateCreator<ProductSlice> = (
   get
 ) => ({
   products: [],
-  loading: false,
-  getProducts: async (page: number, limit: number) => {
-    set({ loading: true }, false, "PRODUCTS_FETCH_START");
+  page: 1,
+  limit: 12,
+  isFetchingProducts: false,
+  allProductsFetched: false,
+  getProducts: async () => {
+    set({ isFetchingProducts: true }, false, "PRODUCTS_FETCH_START");
     try {
+      const { page, limit } = get();
       const incomingProducts = await getProducts(page, limit);
+      const allProductsFetched = incomingProducts.length < limit;
       set(
         {
           products: [...get().products, ...incomingProducts],
-          loading: false,
+          page: page + 1,
+          isFetchingProducts: false,
+          allProductsFetched,
         },
         false,
         "PRODUCTS_FETCH_SUCCESS"
       );
     } catch (error) {
-      set({ loading: false }, false, "PRODUCTS_FETCH_FAILURE");
+      set({ isFetchingProducts: false }, false, "PRODUCTS_FETCH_FAILURE");
     }
+  },
+  reduceProductStock: (productId: string, quantity: number) => {
+    set((state) => {
+      const product = state.products.find(
+        (product) => product.id === productId
+      );
+      if (product) {
+        product.stock -= quantity;
+        if (product.stock <= 0) {
+          product.inStock = false;
+        }
+      }
+    });
   },
 });

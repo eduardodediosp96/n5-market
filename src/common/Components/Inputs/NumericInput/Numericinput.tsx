@@ -24,7 +24,13 @@ const NumericInput = ({
   disabled = false,
 }: NumericInputProps) => {
   const handleValueChange = (e: ChangeEvent<HTMLInputElement>) => {
-    onValueChange(Number(e.target.value));
+    if (Number(e.target.value) < min) {
+      onValueChange(min);
+    } else if (Number(e.target.value) > max) {
+      onValueChange(max);
+    } else {
+      onValueChange(Number(e.target.value));
+    }
   };
 
   return (
@@ -39,14 +45,14 @@ const NumericInput = ({
       />
       <ButtonWrapper disabled={disabled}>
         <PlusButton
-          disabled={value >= max}
+          disabled={value >= max || disabled}
           tabIndex={-1}
           onClick={() => onValueChange(value + 1)}
         >
           +
         </PlusButton>
         <MinusButton
-          disabled={value <= min}
+          disabled={value <= min || disabled}
           tabIndex={-1}
           onClick={() => onValueChange(value - 1)}
         >

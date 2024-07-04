@@ -1,37 +1,49 @@
 // @React-Hooks
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 // @Styles
 import { ProductsWrapper } from "./products.styles";
 
-// @Types
+// @Components
 import Product from "./components/Product";
 import Typography from "@commonComponents/Typography/Typography";
 
 // @Store
 import useStore from "@store/useStore";
 
-// @Constants
-const PAGE_LIMIT = 12;
-
 const Products = () => {
-  const [page, setPage] = useState(1);
+  const initialFetchDone = useRef(false); // Ref to track if initial fetch is done
   const loader = useRef(null);
-  const { products, loading, getProducts } = useStore((state) => ({
-    products: state.products,
-    loading: state.loading,
-    getProducts: state.getProducts,
-  }));
+  const { products, isFetchingProducts, getProducts, allProductsFetched } =
+    useStore((state) => ({
+      products: state.products,
+      isFetchingProducts: state.isFetchingProducts,
+      getProducts: state.getProducts,
+      allProductsFetched: state.allProductsFetched,
+    }));
 
+  // Initial fetch
   useEffect(() => {
-    if (loading) return;
-    getProducts(page, PAGE_LIMIT);
-  }, [page]);
+    if (!initialFetchDone.current) {
+      getProducts();
+      initialFetchDone.current = true;
+    }
+  }, []);
 
+  // IntersectionObserver setup
   useEffect(() => {
-    const observer = new IntersectionObserver(handleObserver, {
-      threshold: 1.0,
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const target = entries[0];
+        if (target.isIntersecting && !isFetchingProducts) {
+          getProducts();
+        }
+      },
+      {
+        threshold: 1.0,
+      }
+    );
+
     if (loader.current) {
       observer.observe(loader.current);
     }
@@ -41,14 +53,7 @@ const Products = () => {
         observer.unobserve(loader.current);
       }
     };
-  }, []);
-
-  const handleObserver = (entities: any) => {
-    const target = entities[0];
-    if (target.isIntersecting) {
-      setPage((prevPage) => prevPage + 1);
-    }
-  };
+  }, [isFetchingProducts]);
 
   return (
     <>
@@ -57,8 +62,15 @@ const Products = () => {
           <Product key={product.id} product={product} />
         ))}
       </ProductsWrapper>
-      {loading && <Typography variant="subtitle">Loading...</Typography>}
-      <div ref={loader} />
+      {isFetchingProducts ? (
+        <Typography variant="subtitle">Loading...</Typography>
+      ) : allProductsFetched ? (
+        <Typography variant="subtitle">No more products to show</Typography>
+      ) : (
+        // This div will only render if not loading and not all products fetched
+        // This is to bind the observer to the bottom of the page
+        <div ref={loader} />
+      )}
     </>
   );
 };

@@ -48,8 +48,12 @@ export const NumericInputWrapper = styled.div<{ disabled: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 75px;
+  height: 25px;
 
   input[type="number"] {
+    width: 100%;
+    height: 100%;
     color: ${({ theme }) => theme.palette.text()};
     background-color: ${({ theme }) => theme.palette.cardBackground()};
     border: 1px solid ${({ theme }) => theme.palette.cardBackground("contrast")};
@@ -57,7 +61,6 @@ export const NumericInputWrapper = styled.div<{ disabled: boolean }>`
     padding: 4px;
     opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
     cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-    min-width: 75px;
   }
 
   //remove native arrows from input

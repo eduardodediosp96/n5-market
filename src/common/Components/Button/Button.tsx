@@ -1,6 +1,12 @@
 // @Styles
 import { StyledButton } from "./Button.styles";
 
+export enum ButtonSize {
+  SMALL = "SMALL",
+  MEDIUM = "MEDIUM",
+  LARGE = "LARGE",
+}
+
 export enum ButtonType {
   PRIMARY = "PRIMARY",
   SECONDARY = "SECONDARY",
@@ -9,19 +15,29 @@ export enum ButtonType {
 
 interface ButtonProps {
   children: React.ReactNode;
-  buttonType: ButtonType;
+  buttonType?: ButtonType;
+  size?: ButtonSize;
   disabled?: boolean;
   onClick?: () => void;
+  fullWidth?: boolean;
 }
 
 const Button = ({
   children,
-  buttonType,
+  buttonType = ButtonType.PRIMARY,
+  size = ButtonSize.MEDIUM,
   disabled = false,
   onClick = () => {},
+  fullWidth = false,
 }: ButtonProps) => {
   return (
-    <StyledButton buttonType={buttonType} disabled={disabled} onClick={onClick}>
+    <StyledButton
+      buttonType={buttonType}
+      buttonSize={size}
+      disabled={disabled}
+      onClick={onClick}
+      fullWidth={fullWidth}
+    >
       {children}
     </StyledButton>
   );

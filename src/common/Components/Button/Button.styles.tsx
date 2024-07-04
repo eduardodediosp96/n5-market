@@ -3,7 +3,19 @@ import styled from "@emotion/styled";
 
 // @Types
 import { ThemeType } from "@theme/Theme.types";
-import { ButtonType } from "./Button";
+import { ButtonSize, ButtonType } from "./Button";
+
+const buttonSizeStyles = (theme: ThemeType) => ({
+  [ButtonSize.SMALL]: {
+    padding: theme.spacing(0.5),
+  },
+  [ButtonSize.MEDIUM]: {
+    padding: theme.spacing(1),
+  },
+  [ButtonSize.LARGE]: {
+    padding: theme.spacing(1.5),
+  },
+});
 
 const buttonTypeStyles = (theme: ThemeType) => ({
   [ButtonType.PRIMARY]: {
@@ -24,7 +36,9 @@ const buttonTypeStyles = (theme: ThemeType) => ({
 });
 
 export const StyledButton = styled.button<{
+  fullWidth?: boolean;
   buttonType: ButtonType;
+  buttonSize: ButtonSize;
   disabled?: boolean;
 }>`
   display: flex;
@@ -32,7 +46,9 @@ export const StyledButton = styled.button<{
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
-  padding: ${({ theme }) => theme.spacing(0.5)};
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
+  padding: ${({ theme, buttonSize }) =>
+    buttonSizeStyles(theme)[buttonSize].padding};
   ${({ theme, buttonType, disabled }) => {
     const { backgroundColor, color, borderColor } =
       buttonTypeStyles(theme)[buttonType];

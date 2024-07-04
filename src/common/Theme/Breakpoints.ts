@@ -1,8 +1,9 @@
 // @Types
-import { Breakpoint, BreakpointsType } from './Theme.types';
+import { Breakpoint, BreakpointsType } from "./Theme.types";
 
 const breakpointValues = {
   mobileS: 320,
+  mobileM: 375,
   mobileL: 426,
   tabletS: 600,
   tablet: 768,

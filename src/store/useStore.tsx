@@ -29,8 +29,8 @@ const useStore = create<MarketStore>()(
         storage: localStorageStorage,
         partialize: (state) => {
           // Specify which parts of the state to persist
-          const { cart, colorMode } = state;
-          return { cart, colorMode };
+          const { cartProducts, colorMode } = state;
+          return { cartProducts, colorMode };
         },
       }
     ),
