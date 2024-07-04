@@ -1,5 +1,5 @@
 // @Mock
-import { products } from "./mock_products";
+import { products } from "./mock_products.json";
 
 // @Types
 import { type Product } from "./products.types";
